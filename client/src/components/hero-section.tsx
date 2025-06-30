@@ -72,9 +72,14 @@ export default function HeroSection() {
             <span className="block">FOR EMISSION</span>
             <span className="block text-yellow-400">CONTROL</span>
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl mb-8 opacity-0 max-w-3xl mx-auto">
-            Advanced Retrofit Emission Control Devices achieving 80-90% reduction in diesel generator emissions
-          </p>
+          <div className="hero-subtitle text-xl md:text-2xl mb-8 opacity-0 max-w-3xl mx-auto space-y-4">
+            <p className="font-semibold text-2xl md:text-3xl text-yellow-300">
+              SMART SOLUTION FOR EMISSION CONTROL
+            </p>
+            <p>
+              Advanced Retrofit Emission Control Devices achieving 80-90% reduction in diesel generator emissions
+            </p>
+          </div>
           <div className="hero-buttons space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center opacity-0">
             <Button 
               size="lg" 
