@@ -11,7 +11,20 @@ export default function HeroSection() {
       const tl = window.gsap.timeline();
       tl.from('.hero-title', { duration: 1.5, y: 100, opacity: 0, ease: 'power3.out' })
         .from('.hero-subtitle', { duration: 1, y: 50, opacity: 0, ease: 'power2.out' }, '-=0.5')
-        .from('.hero-buttons', { duration: 1, y: 30, opacity: 0, ease: 'power2.out' }, '-=0.3');
+        .from('.hero-buttons', { duration: 1, y: 30, opacity: 0, ease: 'power2.out' }, '-=0.3')
+        .from('.earth-image', { duration: 2, x: 100, opacity: 0, scale: 0.8, ease: 'back.out(1.7)' }, '-=1');
+      
+      // Parallax effect for earth image on scroll
+      window.gsap.to('.parallax-element', {
+        yPercent: -20,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
     }
   }, []);
 
@@ -25,6 +38,25 @@ export default function HeroSection() {
   return (
     <section id="home" ref={heroRef} className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden">
       <ParticleSystem />
+      
+      {/* Animated Earth Image */}
+      <div className="absolute right-4 md:right-10 top-1/2 transform -translate-y-1/2 z-10 parallax-element earth-image">
+        <div className="relative earth-float">
+          <div className="w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden earth-pulse">
+            <img 
+              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+              alt="Earth - Environmental protection" 
+              className="w-full h-full object-cover earth-rotate" 
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-green-500/30 to-transparent rounded-full"></div>
+          <div className="absolute -inset-2 md:-inset-4 border-2 border-green-400/50 rounded-full animate-pulse-slow"></div>
+          
+          {/* Orbital rings */}
+          <div className="absolute -inset-8 md:-inset-12 border border-green-300/30 rounded-full animate-spin-slow"></div>
+          <div className="absolute -inset-12 md:-inset-16 border border-blue-300/20 rounded-full animate-spin-slow" style={{animationDirection: 'reverse', animationDuration: '15s'}}></div>
+        </div>
+      </div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
