@@ -108,7 +108,7 @@ export default function ContactSection() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold">TEC HONCO TECHNOLOGIES PVT LTD</p>
+                    <p className="font-semibold">TECHONCO TECHNOLOGIES PVT LTD</p>
                     <p className="opacity-90">Corporate Headquarters, India</p>
                   </div>
                 </div>

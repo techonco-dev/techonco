@@ -54,7 +54,7 @@ export default function Home() {
                 The pressing issue of rising levels of air pollution has become a grave concern with far-reaching consequences on the environment and significant health risks, particularly in developing nations.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                TEC HONCO TECHNOLOGIES introduces an effective remedy – the Retrofit Emission Control Device (RECD) designed for Diesel Generators ranging from 125 kVA to 1000 kVA.
+                TECHONCO TECHNOLOGIES introduces an effective remedy – the Retrofit Emission Control Device (RECD) designed for Diesel Generators ranging from 125 kVA to 1000 kVA.
               </p>
               <div className="flex items-center space-x-4 pt-4">
                 <div className="flex items-center space-x-2 text-green-600">
@@ -146,7 +146,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text mb-4">TEC HONCO TECHNOLOGIES</div>
+            <div className="text-3xl font-bold gradient-text mb-4">TECHONCO TECHNOLOGIES</div>
             <p className="text-gray-400 mb-6">Leading the future of emission control technology</p>
             <div className="flex justify-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -166,7 +166,7 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400">&copy; 2024 TEC HONCO TECHNOLOGIES PVT LTD. All rights reserved.</p>
+              <p className="text-gray-400">&copy; 2024 TECHONCO TECHNOLOGIES PVT LTD. All rights reserved.</p>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function HeroSection() {
           <div className="text-left text-white space-y-8">
             <div className="hero-title opacity-0">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 gradient-text">
-                TEC HONCO TECHNOLOGIES
+                TECHONCO TECHNOLOGIES
               </h1>
               <div className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="block text-yellow-400">SMART SOLUTION</span>

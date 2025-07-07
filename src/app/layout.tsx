@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TEC HONCO TECHNOLOGIES",
+  title: "TECHONCO TECHNOLOGIES",
   description: "Leading the future of emission control technology",
 };
 

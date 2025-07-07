@@ -39,7 +39,7 @@ export default function FloatingNav() {
         isScrolled ? 'bg-white/95' : 'bg-white/90'
       }`}>
         <div className="flex items-center space-x-8">
-          <div className="font-bold text-xl gradient-text">TEC HONCO</div>
+          <div className="font-bold text-xl gradient-text">TECHONCO</div>
           <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <button
