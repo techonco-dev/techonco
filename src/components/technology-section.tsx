@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 const steps = [
   {
@@ -22,6 +23,14 @@ const steps = [
     color: 'bg-yellow-600'
   }
 ];
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    gsap: any;
+  }
+}
 
 export default function TechnologySection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -56,10 +65,13 @@ export default function TechnologySection() {
         
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
               alt="Diesel generator with emission control system" 
               className="rounded-2xl shadow-xl w-full h-auto" 
+              width={800}
+              height={600}
+              unoptimized
             />
           </div>
           <div className="space-y-8">

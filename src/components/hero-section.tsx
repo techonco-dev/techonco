@@ -4,6 +4,16 @@ import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import ParticleSystem from './particle-system';
+import Image from 'next/image';
+
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    gsap: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ScrollTrigger: any;
+  }
+}
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -97,10 +107,13 @@ export default function HeroSection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative earth-float earth-image">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden earth-pulse">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
                   alt="Earth - Environmental protection" 
                   className="w-full h-full object-cover earth-rotate" 
+                  width={800}
+                  height={800}
+                  unoptimized
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-green-500/30 to-transparent rounded-full"></div>

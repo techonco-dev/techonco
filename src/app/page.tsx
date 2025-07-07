@@ -10,6 +10,17 @@ import ComplianceSection from '@/components/compliance-section';
 import ContactSection from '@/components/contact-section';
 import FloatingNav from '@/components/floating-nav';
 import { useScrollProgress } from '@/hooks/use-scroll-progress';
+import Image from 'next/image';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    gsap: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ScrollTrigger: any;
+  }
+}
 
 export default function Home() {
   const scrollProgress = useScrollProgress();
@@ -61,10 +72,13 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
                 alt="Industrial emission control facility" 
                 className="rounded-2xl shadow-2xl w-full h-auto card-hover-effect" 
+                width={800}
+                height={600}
+                unoptimized
               />
               <div className="absolute -bottom-6 -right-6 glass-effect rounded-xl p-6 text-white bg-gradient-to-r from-blue-600 to-green-600">
                 <div className="text-2xl font-bold">70-90%</div>
@@ -90,25 +104,37 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1581092163592-8ab8c6332ec6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
               alt="Industrial diesel generator facility" 
               className="rounded-xl shadow-lg w-full h-auto card-hover-effect" 
+              width={400}
+              height={300}
+              unoptimized
             />
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1581092791442-1151a4d90f4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
               alt="Environmental monitoring technology" 
               className="rounded-xl shadow-lg w-full h-auto card-hover-effect" 
+              width={400}
+              height={300}
+              unoptimized
             />
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
               alt="Clean industrial emission control facility" 
               className="rounded-xl shadow-lg w-full h-auto card-hover-effect" 
+              width={400}
+              height={300}
+              unoptimized
             />
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" 
               alt="Advanced industrial generator with emission control" 
               className="rounded-xl shadow-lg w-full h-auto card-hover-effect" 
+              width={400}
+              height={300}
+              unoptimized
             />
           </div>
         </div>
