@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navItems = [
   { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
   { href: '#technology', label: 'Technology' },
   { href: '#products', label: 'Products' },
   { href: '#compliance', label: 'Compliance' },
@@ -15,6 +17,7 @@ const navItems = [
 export default function FloatingNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +42,22 @@ export default function FloatingNav() {
         isScrolled ? 'bg-white/95' : 'bg-white/90'
       }`}>
         <div className="flex items-center space-x-8">
-          <div className="font-bold text-xl gradient-text">TECHONCO</div>
+          
+          <div className="font-bold text-xl gradient-text">
+            {!logoError ? (
+              <Image
+                src="/logo.png"
+                alt="Techonco Logo"
+                width={150}
+                height={150}
+                onError={() => setLogoError(true)}
+                className="inline-block align-middle"
+                priority
+              />
+            ) : (
+              'TECHONCO'
+            )}
+          </div>
           <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <button

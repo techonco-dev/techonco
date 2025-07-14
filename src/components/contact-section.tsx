@@ -109,7 +109,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">TECHONCO TECHNOLOGIES PVT LTD</p>
-                    <p className="opacity-90">Corporate Headquarters, India</p>
+                    <p className="opacity-90">B-1202, UTC, Sector 132, Noida, Uttar Pradesh- 201304, India</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -118,7 +118,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Sales & Support</p>
-                    <p className="opacity-90">+91 XXXX-XXXX-XX</p>
+                    <p className="opacity-90">+91 9993933948 / 9654953201</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">

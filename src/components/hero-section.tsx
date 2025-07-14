@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import ParticleSystem from './particle-system';
-import Image from 'next/image';
 
 declare global {
   interface Window {
@@ -48,10 +47,16 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" ref={heroRef} className="relative min-h-screen hero-gradient flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      ref={heroRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/banner.jpg')" }}
+    >
       <ParticleSystem />
       
-
+      {/* Optional: Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -60,6 +65,13 @@ export default function HeroSection() {
         <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-white bg-opacity-10 rounded-full animate-float" style={{animationDelay: '-4s'}}></div>
       </div>
       
+      {/* Highlighted Banner Text Overlay */}
+      <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+        <h2 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-center bg-gradient-to-r from-yellow-400 via-white to-yellow-400 bg-clip-text text-transparent drop-shadow-lg px-4 py-2 rounded-lg">
+          SMART SOLUTION FOR EMISSION CONTROL
+        </h2>
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Left Side - Text Content */}
@@ -100,28 +112,6 @@ export default function HeroSection() {
               >
                 Get Quote
               </Button>
-            </div>
-          </div>
-          
-          {/* Right Side - Earth Image (moved from absolute positioning) */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative earth-float earth-image">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden earth-pulse">
-                <Image 
-                  src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-                  alt="Earth - Environmental protection" 
-                  className="w-full h-full object-cover earth-rotate" 
-                  width={800}
-                  height={800}
-                  unoptimized
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-green-500/30 to-transparent rounded-full"></div>
-              <div className="absolute -inset-2 md:-inset-4 border-2 border-green-400/50 rounded-full animate-pulse-slow"></div>
-              
-              {/* Orbital rings */}
-              <div className="absolute -inset-8 md:-inset-12 border border-green-300/30 rounded-full animate-spin-slow"></div>
-              <div className="absolute -inset-12 md:-inset-16 border border-blue-300/20 rounded-full animate-spin-slow" style={{animationDirection: 'reverse', animationDuration: '15s'}}></div>
             </div>
           </div>
         </div>

@@ -66,11 +66,11 @@ export default function TechnologySection() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <Image 
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              src="operating.png" 
               alt="Diesel generator with emission control system" 
               className="rounded-2xl shadow-xl w-full h-auto" 
               width={800}
-              height={600}
+              height={800}
               unoptimized
             />
           </div>
@@ -79,9 +79,9 @@ export default function TechnologySection() {
             <div className="space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex items-start space-x-4">
-                  <div className={`w-12 h-12 ${step.color} rounded-full flex items-center justify-center text-white font-bold`}>
+                  {/* <div className={`w-8 h-8  rounded flex items-center justify-center text-white font-bold`}>
                     {step.number}
-                  </div>
+                  </div> */}
                   <div>
                     <h4 className="font-semibold text-lg mb-2">{step.title}</h4>
                     <p className="text-gray-600">{step.description}</p>

@@ -9,6 +9,8 @@ import BenefitsSection from '@/components/benefits-section';
 import ComplianceSection from '@/components/compliance-section';
 import ContactSection from '@/components/contact-section';
 import FloatingNav from '@/components/floating-nav';
+import GlobeSection from '@/components/globe-section';
+import AboutSection from '@/components/about-section';
 import { useScrollProgress } from '@/hooks/use-scroll-progress';
 import Image from 'next/image';
 
@@ -42,7 +44,10 @@ export default function Home() {
       
       <FloatingNav />
       <HeroSection />
+   
+      {/* <GlobeSection /> */}
       <StatisticsSection />
+      <AboutSection />
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -72,22 +77,16 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <Image 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Industrial emission control facility" 
-                className="rounded-2xl shadow-2xl w-full h-auto card-hover-effect" 
-                width={800}
-                height={600}
-                unoptimized
-              />
+              <GlobeSection />
               <div className="absolute -bottom-6 -right-6 glass-effect rounded-xl p-6 text-white bg-gradient-to-r from-blue-600 to-green-600">
-                <div className="text-2xl font-bold">70-90%</div>
+                <div className="text-2xl font-bold">85-95%</div>
                 <div className="text-sm">Emission Reduction</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <TechnologySection />
       <ProductsSection />
       <BenefitsSection />
